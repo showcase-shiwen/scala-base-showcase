@@ -32,9 +32,13 @@ object ShowFunc {
     //高阶函数
 
     //函数的参数 是函数
-    func5((x:Int,y:Int) => {x+y}, "abc")
+    println(func5((x: Int, y: Int) => {
+      x + y
+    }, 6, 8))
     //函数的返回是函数
-   println( func6()("lisi","110"))
+    println(func6()("lisi", "110"))
+    //柯里化函数
+    println(func7("abc")("def"))
   }
 
   /**
@@ -133,20 +137,32 @@ object ShowFunc {
    * @param x
    * @param y
    */
-  def func5(x: (Int,Int) => Int, y: String): Unit = {
-    var str: Int = x(10,20)
-    println(str, y)
+  def func5(f: (Int, Int) => Int, x: Int, y: Int): Int = {
+    f(x, y)
   }
 
   /**
-   * 函数的返回是函数
+   * 函数的返回是函数 显示指定返回值类型
+   *
    * @param x
    * @param y
    */
-  def func6(): (String,String)=>String = {
-    def a(name:String,phone:String): String ={
+  def func6(): (String, String) => String = {
+    def a(name: String, phone: String): String = {
       return s"$name is phone number  $phone"
     }
-    return a
+
+    a
+  }
+
+  /**
+   * 柯里化函数  目前不知道有什么意义
+   *
+   * @param str1
+   * @param str2
+   * @return
+   */
+  def func7(str1: String)(str2: String): String = {
+    return str1 + "+" + str2
   }
 }
