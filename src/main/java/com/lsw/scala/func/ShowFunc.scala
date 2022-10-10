@@ -42,7 +42,7 @@ object ShowFunc {
   }
 
   /**
-   * 略{}
+   * 方法体一体逻辑可以 省略{}
    * @param x
    * @param y
    * @return
