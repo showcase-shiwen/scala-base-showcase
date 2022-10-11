@@ -18,7 +18,7 @@ class Person(xName: String, xAge: Int) {
   }
 
   def hello(): Unit = {
-    println(name, " am ", age)
+    println(name+ " am "+ age)
   }
 }
 
