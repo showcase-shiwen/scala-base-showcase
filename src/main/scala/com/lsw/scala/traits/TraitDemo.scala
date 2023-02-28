@@ -1,4 +1,4 @@
-package com.lsw.scala.`trait`
+package com.lsw.scala.traits
 
 trait Listen {
   def Listen(name: String): Unit = {

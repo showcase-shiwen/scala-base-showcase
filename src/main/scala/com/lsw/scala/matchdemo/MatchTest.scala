@@ -1,17 +1,20 @@
-package com.lsw.scala.`match`
+package com.lsw.scala.matchdemo
 
 object MatchTest {
 
-
+  def matchTest(x:Any): Unit ={
+    x match {
+      case 1=> println("number")
+      case "str"=> println("String")
+      //理解default
+      case _=> println("any")
+    }
+  }
   def main(array:Array[String]):Unit={
-
-    var str:Int =1
-
-  (str match {
-      case 1 => "A"
-      case 2 => "B"
-      case 3 => "C"
-    })
+    matchTest("str")
+    matchTest(1)
+    matchTest(2.3)
+    matchTest(true)
 
 
   }

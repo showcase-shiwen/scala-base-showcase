@@ -79,7 +79,7 @@ object ShowFunc {
    * @param y
    * @return
    */
-  def sum(x: Int, y: Int) = x + y
+  def sum(x: Int, y: Int):Int = x + y
 
   /**
    * 如果方法体与方法名中的 " = " 省略 返回空Unit

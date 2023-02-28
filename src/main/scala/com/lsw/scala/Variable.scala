@@ -1,7 +1,14 @@
 package com.lsw.scala;
 
 object Variable {
+
+  def test():Unit={
+    println("test")
+  }
   def main(args: Array[String]): Unit = {
+    //调用函数
+    test()
+
     //定义变量 强声明
     var str1: String = "hello"
     //定义常量

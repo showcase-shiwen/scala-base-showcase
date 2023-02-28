@@ -1,5 +1,7 @@
 package com.lsw.scala.invoke
 
-class ScalaApi {
-
+object ScalaApi {
+  def hello():String={
+    return "hello"
+  }
 }

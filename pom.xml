@@ -13,6 +13,14 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.12.10</version>
+        </dependency>
+    </dependencies>
+
 
     <build>
         <plugins>
@@ -23,10 +31,15 @@
                 <version>3.2.2</version>
                 <executions>
                     <execution>
-                        <!-- 声明绑定到maven的compile阶段 -->
                         <goals>
-                            <goal>testCompile</goal>
+                            <goal>compile</goal>
                         </goals>
+                        <configuration>
+                            <!--includes是一个数组，包含要编译的code-->
+                            <includes>
+                                <include>**/*.scala</include>
+                            </includes>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

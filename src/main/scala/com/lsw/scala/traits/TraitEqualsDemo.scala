@@ -1,4 +1,4 @@
-package com.lsw.scala.`trait`
+package com.lsw.scala.traits
 
 class TraitClassDemo(x1:Int, y1:Int) extends TraitEquals {
   var x:Int=x1
