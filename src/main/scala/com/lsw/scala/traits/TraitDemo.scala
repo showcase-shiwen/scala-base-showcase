@@ -1,4 +1,4 @@
-package com.lsw.scala.classandObj
+package com.lsw.scala.`trait`
 
 trait Listen {
   def Listen(name: String): Unit = {
@@ -20,6 +20,7 @@ class Child() extends Listen with Read with Eat {
   override def Eat(name: String): Unit = {
     println(s"$name is eating ")
   }
+
 }
 
 /**
